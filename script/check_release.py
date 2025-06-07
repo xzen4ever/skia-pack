@@ -16,7 +16,7 @@ def main():
     zip = 'Skia-' + version + '-' + target + '-' + build_type + '-' + machine + classifier + '.zip'
     if zip in artifacts:
       print('> Artifact "' + zip + '" exists, stopping')
-      return 1
+      return 0
     return 0
   except urllib.error.URLError as e:
     return 0
