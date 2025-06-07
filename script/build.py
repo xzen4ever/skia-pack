@@ -96,7 +96,10 @@ def main():
       ]
   elif 'android' == target:
     args += [
-      'ndk="'+ ndk + '"'
+      'ndk="'+ ndk + '"',
+      'skia_use_gl=true',
+      'skia_enable_gpu=true',
+      'skia_use_freetype=true',
     ]
   elif 'wasm' == target:
     # brew install emscripten binaryen llvm nodejs
